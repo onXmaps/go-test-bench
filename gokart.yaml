@@ -1,0 +1,10 @@
+steps:
+  - name: 'gcr.io/onx-infrasec/gokart@sha256:0ad505c7ace8d8711f980716fe5fd9df637e289ad8d275c109c95017d300c896'
+    args: ['scan','/workspace']
+logsBucket: 'onx-infrasec-logging'
+# Incorporation into cloudbuild.yaml requires
+# secrets, roles, logging, and IAP configuration within
+# the context of the build project.
+#
+# Dev and Sec therefore take on mutual dependencies
+# unless the yaml are forked.
